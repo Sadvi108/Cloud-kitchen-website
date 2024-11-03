@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiteBurst Kitchen</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-title-container">
+                <h2 class="site-title">
+                    <img src="images/773e58bd1869b8382bba3c6b0881f18c.png" alt="" class="logo">
+                    BiteBurst Kitchen
+                </h2>      
+            </div>
+            <div class="group">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                    <g>
+                        <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                    </g>
+                </svg>
+                <input id="query" class="input" type="search" placeholder="Search..." name="searchbar" />
+            </div>
+        </div>
+        <nav class="button-container">
+            <button onclick="showSection('home')"><span class="button_top">Home</span></button>
+            <button onclick="showSection('contact')"><span class="button_top">Contact</span></button>
+            <button onclick="showSection('location')"><span class="button_top">Location</span></button>
+            <button onclick="showSection('order')"><span class="button_top">Order</span></button>
+            <button onclick="toggleMenu()"><span class="button_top">View Menu</span></button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="section">
+            <div class="container">
+                <h2>Welcome to BiteBurst Kitchen</h2>
+                <div id="food-vlog-news">
+                    <h3>Blogs</h3>
+                    <div class="news-container">
+                        <div class="news-item">
+                            <h4>5 Must-Try Street Foods in Kuala Lumpur</h4>
+                            <p>Published: October 15, 2024</p>
+                        </div>
+                        <div class="news-item">
+                            <h4>The Rise of Vegan Cuisine in Malaysia</h4>
+                            <p>Published: October 28, 2024</p>
+                        </div>
+                        <div class="news-item">
+                            <h4>Behind the Scenes: A Day in a Cloud Kitchen</h4>
+                            <p>Published: October 30, 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="our-operations">
+                    <button id="operationsBtn" class="operations-btn">Our Operations</button>
+                    <div id="operationsContent" class="operations-content">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li>Takeaway</li>
+                            <li>Delivery</li>
+                            <li>Dine-in</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>BiteBurst is a next-generation cloud kitchen delivering a variety of bold and delicious dishes straight to your door, revolutionizing the way you experience food. Our team of culinary innovators crafts each menu with care, ensuring every bite brings an explosion of flavor and a unique twist on your favorite meals. With BiteBurst, you get more than just convenience; you get a vibrant, mouthwatering journey through different cuisines, reimagined for today's fast-paced world. From our high-tech kitchen to your table, we bring passion, quality, and creativity to each dish, ready to surprise your palate and redefine your expectations of takeout.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Phone: +60104259130</p>
+                <p>Email: info@biteburstkitchen.com</p>
+            </div>
+        </section>
+
+        <section id="location" class="section">
+            <div class="container">
+                <h2>Our Location</h2>
+                <p>Taylor's University Lakeside Campus, Bandar Sunway, Subang Jaya, Selangor, Malaysia</p>
+            </div>
+        </section>
+
+        <section id="order" class="section">
+            <div class="container">
+                <h2>Order Now</h2>
+                <p>Browse our menu for special discounts on delicious items!</p>
+                <div class="menu-gallery">
+                    <img src="images/pngwing.com.png" alt="Dish Image">
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="section">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+        
+                <!-- Burgers & Sandwiches -->
+                <div class="menu-category">
+                    <h3>🍔 Burgers & Sandwiches</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <strong>Spicy Chicken Burger</strong> – RM 8.99<br>
+                            Juicy, crispy chicken breast with a kick of spice, served in a sesame bun.
+                            <button class="add-to-cart" data-name="Spicy Chicken Burger" data-price="8.99">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <strong>Beef Rendang Burger</strong> – RM 10.99<br>
+                            Malaysian rendang beef with spices on a soft bun.
+                            <button class="add-to-cart" data-name="Beef Rendang Burger" data-price="10.99">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <strong>Ayam Satay Wrap</strong> – RM 7.99<br>
+                            Grilled chicken satay in a wrap with veggies and peanut sauce.
+                            <button class="add-to-cart" data-name="Ayam Satay Wrap" data-price="7.99">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pizzas -->
+                <div class="menu-category">
+                    <h3>🍕 Pizzas</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <strong>Veggie Delight Pizza</strong> – RM 12.99<br>
+                            Bell peppers, onions, mushrooms, and olives with cheese.
+                            <button class="add-to-cart" data-name="Veggie Delight Pizza" data-price="12.99">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <strong>Chicken Satay Pizza</strong> – RM 13.99<br>
+                            Marinated chicken with peanut sauce, sprinkled with chili flakes.
+                            <button class="add-to-cart" data-name="Chicken Satay Pizza" data-price="13.99">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <strong>Pineapple & Sambal Pizza</strong> – RM 13.49<br>
+                            Sweet pineapple, spicy sambal, and mozzarella cheese.
+                            <button class="add-to-cart" data-name="Pineapple & Sambal Pizza" data-price="13.49">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart" class="section">
+            <div class="container">
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+                <div id="cart-total">Total: RM 0.00</div>
+                <button id="confirm-order">Confirm Order</button>
+            </div>
+        </section>
+
+        <section id="order-confirmation" class="section">
+            <div class="container">
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for your order. Your delicious meal will be prepared shortly.</p>
+                <button id="proceed-to-payment">Proceed to Payment</button>
+            </div>
+        </section>
+
+        <!-- Update only the payment-gateway section in the HTML -->
+<section id="payment-gateway" class="section">
+        <div class="container">
+            <h2>Payment Options</h2>
+            <p>Please select your preferred payment method:</p>
+            <div class="payment-options">
+                <div class="payment-option">
+                    <div class="payment-logo-container">
+                        <img src="images/credit debit.png" 
+                             alt="Credit/Debit Cards" 
+                             class="payment-logo credit-cards">
+                    </div>
+                    <button class="payment-button" data-method="card">
+                        Pay with Credit/Debit Card
+                    </button>
+                </div>
+            <div class="payment-option">
+                <div class="payment-logo-container">
+                    <img src="images/Touch n Go Ewallet Logo.png"
+                         alt="Touch 'n Go" 
+                         class="payment-logo">
+                </div>
+                <button class="payment-button" data-method="tng">
+                    Pay with Touch 'n Go
+                </button>
+            </div>
+            <div class="payment-option">
+                <div class="payment-logo-container">
+                    <img src="images/Premier-Banking.webp" 
+                         alt="Online Banking" 
+                         class="payment-logo">
+                </div>
+                <button class="payment-button" data-method="bank">
+                    Pay with Online Banking
+                </button>
+            </div>
+            <div class="payment-option">
+                <div class="payment-logo-container">
+                    <img src="images/paypal.png"
+                         alt="PayPal" 
+                         class="payment-logo">
+                </div>
+                <button class="payment-button" data-method="paypal">
+                    Pay with PayPal
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="credit-card-form" class="section">
+    <div class="container">
+        <h2>Enter Credit/Debit Card Information</h2>
+        <form id="card-payment-form">
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" required>
+            </div>
+            <div class="form-group">
+                <label for="card-name">Cardholder Name</label>
+                <input type="text" id="card-name" name="card-name" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+            </div>
+            <button type="submit" class="payment-button">Pay Now</button>
+        </form>
+    </div>
+</section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/Yellow and Black Fun Modern Restaurant Food Logo.png" alt="BurstBite Logo" width="100" height="100">
+                </div>
+                <div class="footer-links">
+                    <a href="#terms">Terms and Conditions</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+                <div class="footer-social">
+                    <p>Follow us on:</p>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
